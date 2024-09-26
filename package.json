@@ -4,9 +4,16 @@
   "description": "Collection of easy to use elements with HTML5 Canvas",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "bundle": "npm run build && gulp bundle",
     "dev": "gulp dev"
+  },
+  "tsup": {
+    "entry": ["src/index.ts"],
+    "splitting": false,
+    "sourcemap": false,
+    "format": ["esm"],
+    "clean": true
   },
   "repository": {
     "type": "git",
@@ -19,15 +26,9 @@
   },
   "homepage": "https://github.com/blenderskool/canvas-elements#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "rollup": "^1.6.0",
-    "rollup-plugin-typescript": "^1.0.0",
-    "rollup-plugin-uglify": "^6.0.2",
-    "tslib": "^1.9.3",
-    "typescript": "^3.3.3333"
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
   },
-  "dependencies": {},
   "keywords": [
     "library",
     "collection",
@@ -36,5 +37,6 @@
     "canvas",
     "elements",
     "components"
-  ]
+  ],
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
 }
